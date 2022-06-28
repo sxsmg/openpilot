@@ -62,6 +62,7 @@ private:
   bool engageable = false;
   bool dmActive = false;
   bool hideDM = false;
+  bool rightHandDM = false;
   bool has_us_speed_limit = false;
   bool has_eu_speed_limit = false;
   int status = STATUS_DISENGAGED;
