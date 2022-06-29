@@ -74,7 +74,7 @@ typedef enum UIStatus {
   STATUS_ENGAGED,
   STATUS_WARNING,
   STATUS_ALERT,
-} UIStatus;
+} IStatus;
 
 const QColor bg_colors [] = {
   [STATUS_DISENGAGED] =  QColor(0x17, 0x33, 0x49, 0xc8),
@@ -89,11 +89,23 @@ typedef struct {
   int cnt;
 } line_vertices_data;
 
+typedef struct {
+  QPointF v[4];
+} dmv_data;
+
+
 typedef struct UIScene {
   bool calibration_valid = false;
   mat3 view_from_calib = DEFAULT_CALIBRATION;
   cereal::PandaState::PandaType pandaType;
 
+  float dm_pp;
+  float dmppp;
+  dmv_data dmpp1;
+  float dm_py;
+  float dmpyp;
+  dmv_data dmpy1;
+  float dm_mbp;
   // modelV2
   float lane_line_probs[4];
   float road_edge_stds[2];
@@ -105,7 +117,7 @@ typedef struct UIScene {
   QPointF lead_vertices[2];
 
   float light_sensor, accel_sensor, gyro_sensor;
-  bool started, ignition, is_metric, longitudinal_control;
+  bool started, ignition, is_metric, longitudinal_control, use_ge;
   uint64_t started_frame;
 } UIScene;
 
