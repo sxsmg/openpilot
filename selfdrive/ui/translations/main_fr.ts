@@ -321,9 +321,9 @@
         <translation>TOUT LE TEMPS</translation>
     </message>
     <message>
-        <location filename="../qt/widgets/drive_stats.cc" line="46"/>
+        <location filename="../qt/widgets/drive_stats.cc" line="47"/>
         <source>PAST WEEK</source>
-        <translation>LA SEMAINE DERNIÈRE</translation>
+        <translation>LA SEMAINE DERNIÈRE </translation>
     </message>
 </context>
 <context>
@@ -399,7 +399,7 @@
     </message>
     <message>
         <location filename="../qt/maps/map_settings.cc" line="107"/>
-        <source>Get turn-by-turn directions displayed and more with a comma 
+        <source>Get turn-by-turn directions displayed and more with a comma
 prime subscription. Sign up now: https://connect.comma.ai</source>
         <translation>Obtenez des instructions détaillées affichées et plus encore avec une virgule
 abonnement premium. Inscrivez-vous maintenant : https://connect.comma.ai</translation>
